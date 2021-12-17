@@ -6,8 +6,8 @@
     "start": "npx nodemon ./server.ts",
     "build": "npx tsc",
     "test": "npx jasmine",
-    "pretty": "npx prettier --write '**/*.ts'",
-    "eslint": "npx eslint --ext .ts '**/*.ts'"
+    "pretty": "npx prettier --write **/*.ts",
+    "eslint": "npx eslint --ext .ts **/*.ts"
   },
   "keywords": [],
   "author": "",
