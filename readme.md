@@ -13,5 +13,20 @@ this project is an photo api that uses the local photo and create a resized vers
 
 ## how it is working
 
-first it takes the photo's name from the parameter in the calling link and resize it according to the specified size in the parameter then it make a copy of it in that size in the thumb file and thats it.
-when you call that image again with the same size it will fetch you the copy to help in the performance of the project
+the idea behind the project is very simple, first its an api that take the specified photo and then resized as you like and then it cache it in a thumbnail folder for further requests without needing to run the api to process it again
+
+## how to run the server and use the scripts
+
+- the first script is (npm run build) that build the js from the typescript
+- second the (npm run test) that run the test framework jasmine to test the code for any errors and miss behave
+- third the (npm run start) that run the nodemon on the server.ts to run the server and make the api work
+- forth the (npm run pretty) that run the prettier to format the document to the specify style
+- lastly the (npm run eslint) that run the linter eslint to check the code
+
+## parameters and how to use
+
+to choose what photo you want use the (filename) parameter without the extension name ( {no .jpg} for ex ) that specifies what img to process and then use the (width) parameter to specify the required width for the img, lastly the (height) parameter to specify the required height for the image and here is an example of how to implement it in the api link
+
+```text
+http://localhost:3000/convert?filename={the name of the img in the src/img folder}&width={number}&height={number}
+```
