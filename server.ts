@@ -19,3 +19,5 @@ app.use('/convert', routes);
 app.listen(port, () => {
   console.log(`listening on http://localhost:${port}`);
 });
+
+export default app;
