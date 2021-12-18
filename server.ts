@@ -1,5 +1,6 @@
 // adding the express module
 import express from 'express';
+import routes from './routes/sharp';
 
 // intializing the express app
 const app = express();
@@ -11,6 +12,8 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('to start converting a picture, go to /convert');
 });
+
+app.use('/convert', routes);
 
 //listening to the port
 app.listen(port, () => {
