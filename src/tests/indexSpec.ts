@@ -1,6 +1,7 @@
 import app from '../../server';
 import supertest from 'supertest';
 import routes from '../../routes/sharp';
+import sharpModule from '../../module/module';
 
 describe('check for the server Response', () => {
   it('should return a 200 response', async () => {
@@ -21,7 +22,10 @@ describe('check for the response values', () => {
   it('should return a string in /convert', async () => {
     const response = await supertest(app).get('/convert');
     expect(typeof response.text).toBe('string');
-  })
+  });
+  it('should return a res.sendFile', async () => {
+    expect(typeof sharpModule).toBe('function');
+   });
 });
 
 describe('check for the request values', () => {
