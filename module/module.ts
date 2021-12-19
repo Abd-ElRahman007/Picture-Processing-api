@@ -1,14 +1,14 @@
 import sharp from 'sharp';
 import express from 'express';
-const sharpModule = async (filename: unknown, wd: number, ht: number, rs: express.Response): Promise<void> => {
+const sharpModule = async (filename: unknown, wd: number, ht: number, res: express.Response): Promise<void> => {
   sharp(`./src/img/${filename}.jpg`)
-    .resize(ht, wd)
+    .resize(wd, ht)
     .toFile(
       `./src/thumbnail/${filename}_thumb${wd}x${ht}.jpg`
     )
     .then((info): void => {
       console.log(info);
-      rs.sendFile(
+      res.sendFile(
         `${filename}_thumb${wd}x${ht}.jpg`,
         { root: './src/thumbnail' }
       );

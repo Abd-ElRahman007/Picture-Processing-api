@@ -20,7 +20,7 @@ routes.get('/', (req: express.Request, res: express.Response): void => {
       const file = req.query.filename;
       const width = Number(req.query.width);
       const height = Number(req.query.height);
-      if (typeof width == 'number' && typeof height == 'number') {
+      if ((typeof width == 'number'&&width>0) && (typeof height == 'number'&&height>0)) {
         fsPromises.mkdir('./src/thumbnail', { recursive: true });
         sharpModule(file, width, height, res);
       } else {
