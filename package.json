@@ -6,8 +6,7 @@
     "start": "npx nodemon ./server.ts",
     "build": "npx tsc",
     "test": "npx jasmine",
-    "pretty": "npx prettier --write **/*.ts",
-    "eslint": "npx eslint --ext .ts **/*.ts"
+    "eslint": "npx eslint --ext .ts **/*.ts --fix"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +24,8 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
     "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "jasmine": "^3.10.0",
     "jasmine-spec-reporter": "^7.0.0",
     "nodemon": "^2.0.15",
