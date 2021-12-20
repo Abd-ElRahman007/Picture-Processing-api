@@ -9,13 +9,13 @@ const sharpModule = async (
   sharp(`./src/img/${filename}.jpg`)
     .resize(wd, ht)
     .toFile(`./src/thumbnail/${filename}_thumb${wd}x${ht}.jpg`)
-    .then((info): void => {
-      console.log(info);
+    .then((): void => {
       res.sendFile(`${filename}_thumb${wd}x${ht}.jpg`, {
         root: './src/thumbnail',
       });
     })
     .catch((err): void => {
+      // eslint-disable-next-line no-console
       console.log(err);
     });
 };

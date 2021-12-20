@@ -17,6 +17,7 @@ app.use('/convert', routes);
 
 //listening to the port
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`listening on http://localhost:${port}`);
 });
 

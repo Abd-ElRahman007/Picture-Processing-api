@@ -21,9 +21,9 @@ routes.get('/', (req: express.Request, res: express.Response): void => {
       const width = Number(req.query.width);
       const height = Number(req.query.height);
       if (
-        typeof width == 'number' &&
+        typeof width === 'number' &&
         width > 0 &&
-        typeof height == 'number' &&
+        typeof height === 'number' &&
         height > 0
       ) {
         fsPromises.mkdir('./src/thumbnail', { recursive: true });
@@ -33,7 +33,6 @@ routes.get('/', (req: express.Request, res: express.Response): void => {
       }
     }
   } else {
-    console.log('file not found');
     res.send('file not found');
   }
 });

@@ -6,7 +6,7 @@
     "start": "npx nodemon ./server.ts",
     "build": "npx tsc",
     "test": "npx jasmine",
-    "eslint": "npx eslint --ext .ts **/*.ts --fix"
+    "lint": "npx eslint --ext .ts **/*.ts --fix"
   },
   "keywords": [],
   "author": "",
